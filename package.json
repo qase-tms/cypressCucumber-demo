@@ -1,0 +1,40 @@
+{
+  "name": "qase-cypress",
+  "version": "2.2.7",
+  "description": "A demo repository with Examples, for troubleshooting problems and for feature requests.",
+  "main": "cypress.config.js",
+  "directories": {
+    "test": "cypress/e2e/tests"
+  },
+  "scripts": {
+    "test": "QASE_MODE=testops npx cypress run --spec cypress/integration/**/*.feature"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "testFiles": "**/*.{feature,features}",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cskmnrpt/qase-cypress.git"
+  },
+  "keywords": [
+    "qase-playwright",
+    "qaseio",
+    "qase-tms",
+    "qase-javascript"
+  ],
+  "author": "Qase Support",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/cskmnrpt/qase-cypress/issues"
+  },
+  "homepage": "https://github.com/cskmnrpt/qase-cypress#readme",
+  "devDependencies": {
+    "cosmiconfig": "^9.0.0",
+    "cypress": "^13.16.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-multi-reporters": "^2.0.4",
+    "cypress-qase-reporter": "^2.2.5",
+    "prettier": "^3.4.2"
+  }
+}
