@@ -14,10 +14,4 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands';
-
-// Support for Cucumber tests in Qase reporter
-import { enableCucumberSupport } from 'cypress-qase-reporter';
-
-enableCucumberSupport();
-
+import "./commands";
