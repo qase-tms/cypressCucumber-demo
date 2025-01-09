@@ -20,7 +20,7 @@ module.exports = defineConfig({
               run: {
               //  id: 1,
                 title: "Your test run title",
-                description: "Automated Test run by Playwright",
+                description: "Automated Test run",
                 complete: true,
               },
               environment: 'prod',
