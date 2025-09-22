@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 const cucumber = require("cypress-cucumber-preprocessor").default;
+const { afterSpecHook } = require("cypress-qase-reporter/hooks");
 
 module.exports = defineConfig({
   reporter: "cypress-multi-reporters",
@@ -38,6 +39,10 @@ module.exports = defineConfig({
       on("file:preprocessor", cucumber());
       require("cypress-qase-reporter/plugin")(on, config);
       require("cypress-qase-reporter/metadata")(on);
+
+      on("after:spec", async (spec, results) => {
+        await afterSpecHook(spec, config);
+      });
     },
     specPattern: "cypress/**/*.feature",
   },
